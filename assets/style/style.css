@@ -1,0 +1,15 @@
+main{
+    height: 40vw;
+    display: flex;
+    gap: .8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    width: 3rem;
+    height: 24vw;
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+}
