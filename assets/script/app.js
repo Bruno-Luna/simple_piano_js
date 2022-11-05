@@ -11,41 +11,46 @@ const nota = new Audio;
 notaDo.onclick = () => {
     nota.src = 'assets/notes/C.mp3'
     nota.play()
-    notaDo.classList.add('notaClicada')
+    verificarNotaTocada(notaDo)
 }
 
 notaRe.onclick = () => {
     nota.src = 'assets/notes/D.mp3'
     nota.play()
-    notaRe.classList.add('notaClicada')
+    verificarNotaTocada(notaRe)
 }
 
 notaMi.onclick = () => {
     nota.src = 'assets/notes/E.mp3'
     nota.play()
-    notaMi.classList.add('notaClicada')
+    verificarNotaTocada(notaMi)
 }
 
 notaFa.onclick = () => {
     nota.src = 'assets/notes/F.mp3'
     nota.play()
-    notaFa.classList.add('notaClicada')
+    verificarNotaTocada(notaFa)
 }
 
 notaSol.onclick = () => {
     nota.src = 'assets/notes/G.mp3'
     nota.play()
-    notaSol.classList.add('notaClicada')
+    verificarNotaTocada(notaSol)
 }
 
 notaLa.onclick = () => {
     nota.src = 'assets/notes/A.mp3'
     nota.play()
-    notaLa.classList.add('notaClicada')
+    verificarNotaTocada(notaLa)
+
 }
 
 notaSi.onclick = () => {
     nota.src = 'assets/notes/B.mp3'
     nota.play()
-    notaSi.classList.add('notaClicada')
+    verificarNotaTocada(notaSi)
+}
+
+const verificarNotaTocada = (nota) => {
+    nota.classList.toggle('notaClicada')
 }
