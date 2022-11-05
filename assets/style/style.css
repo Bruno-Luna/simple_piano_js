@@ -1,15 +1,16 @@
 main{
     height: 40vw;
     display: flex;
-    gap: .8rem;
+    gap: 1.4rem;
     justify-content: center;
     align-items: center;
 }
 
 div{
-    width: 3rem;
+    width: 4rem;
     height: 24vw;
     border: 2px solid black;
+    border-radius: .4rem;
     text-align: center;
     cursor: pointer;
 }
