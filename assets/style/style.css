@@ -13,3 +13,7 @@ div{
     text-align: center;
     cursor: pointer;
 }
+
+.notaClicada{
+    background-color: #c3c3c3;
+}
