@@ -8,6 +8,7 @@ const notaSi = document.querySelector('.notaSi')
 const notaDoSustenido = document.querySelector('.notaDoSustenido')
 const notaReSustenido = document.querySelector('.notaReSustenido')
 const notaFaSustenido = document.querySelector('.notaFaSustenido')
+const notaSolSustenido = document.querySelector('.notaSolSustenido')
 
 
 
@@ -59,6 +60,12 @@ notaSol.onclick = () => {
     nota.src = 'assets/notes/G.mp3'
     nota.play()
     verificarNotaTocada(notaSol)
+}
+
+notaSolSustenido.onclick = () => {
+    nota.src = 'assets/notes/Gsharp.mp3'
+    nota.play()
+    verificarNotaTocada(notaSolSustenido)
 }
 
 notaLa.onclick = () => {
