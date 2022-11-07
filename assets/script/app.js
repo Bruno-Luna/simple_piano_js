@@ -7,6 +7,7 @@ const notaLa = document.querySelector('.notaLa')
 const notaSi = document.querySelector('.notaSi')
 const notaDoSustenido = document.querySelector('.notaDoSustenido')
 const notaReSustenido = document.querySelector('.notaReSustenido')
+const notaFaSustenido = document.querySelector('.notaFaSustenido')
 
 
 
@@ -46,6 +47,12 @@ notaFa.onclick = () => {
     nota.src = 'assets/notes/F.mp3'
     nota.play()
     verificarNotaTocada(notaFa)
+}
+
+notaFaSustenido.onclick = () => {
+    nota.src = 'assets/notes/Fsharp.mp3'
+    nota.play()
+    verificarNotaTocada(notaFaSustenido)
 }
 
 notaSol.onclick = () => {
