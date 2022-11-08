@@ -24,7 +24,7 @@ notaDo.onclick = () => {
 notaDoSustenido.onclick = () => {
     nota.src = 'assets/notes/Csharp.mp3'
     nota.play()
-    verificarNotaTocada(notaDoSustenido)
+    verificarNotaTocadaSustenido(notaDoSustenido)
 }
 
 notaRe.onclick = () => {
@@ -36,7 +36,7 @@ notaRe.onclick = () => {
 notaReSustenido.onclick = () => {
     nota.src = 'assets/notes/Dsharp.mp3'
     nota.play()
-    verificarNotaTocada(notaReSustenido)
+    verificarNotaTocadaSustenido(notaReSustenido)
 }
 
 notaMi.onclick = () => {
@@ -54,7 +54,7 @@ notaFa.onclick = () => {
 notaFaSustenido.onclick = () => {
     nota.src = 'assets/notes/Fsharp.mp3'
     nota.play()
-    verificarNotaTocada(notaFaSustenido)
+    verificarNotaTocadaSustenido(notaFaSustenido)
 }
 
 notaSol.onclick = () => {
@@ -66,7 +66,7 @@ notaSol.onclick = () => {
 notaSolSustenido.onclick = () => {
     nota.src = 'assets/notes/Gsharp.mp3'
     nota.play()
-    verificarNotaTocada(notaSolSustenido)
+    verificarNotaTocadaSustenido(notaSolSustenido)
 }
 
 notaLa.onclick = () => {
@@ -79,7 +79,7 @@ notaLa.onclick = () => {
 notaLaSustenido.onclick = () => {
     nota.src = 'assets/notes/Asharp.mp3'
     nota.play()
-    verificarNotaTocada(notaLaSustenido)
+    verificarNotaTocadaSustenido(notaLaSustenido)
 }
 
 notaSi.onclick = () => {
@@ -90,4 +90,8 @@ notaSi.onclick = () => {
 
 const verificarNotaTocada = (nota) => {
     nota.classList.toggle('notaClicada')
+}
+
+const verificarNotaTocadaSustenido = (nota) => {
+    nota.classList.toggle('notaClicadaSustenido')
 }
