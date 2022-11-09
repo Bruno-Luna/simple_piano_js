@@ -20,10 +20,14 @@ div{
     text-align: center;
     cursor: pointer;
     font-size: .92rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .notaClicada{
-    background-color: #c3c3c3c7;
+    background-color: #888888e3;
+    color: #ffffff;
 }
 
 .notaDoSustenido, .notaReSustenido, .notaFaSustenido,
