@@ -11,8 +11,6 @@ const notaFaSustenido = document.querySelector('.notaFaSustenido')
 const notaSolSustenido = document.querySelector('.notaSolSustenido')
 const notaLaSustenido = document.querySelector('.notaLaSustenido')
 
-
-
 const nota = new Audio;
 
 notaDo.onclick = () => {
