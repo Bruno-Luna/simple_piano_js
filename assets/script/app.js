@@ -95,3 +95,47 @@ const verificarNotaTocada = (nota) => {
 const verificarNotaTocadaSustenido = (nota) => {
     nota.classList.toggle('notaClicadaSustenido')
 }
+
+document.addEventListener('keypress', (event) => {
+    verificarTeclaPressionada(event)
+});
+
+const verificarTeclaPressionada = (event) => {
+    const teclaPressionada = event.key
+
+    if (teclaPressionada === 'a')
+        notaDo.onclick()
+
+    if (teclaPressionada === 'w')
+        notaDoSustenido.onclick()
+
+    if (teclaPressionada === 's')
+        notaRe.onclick()
+
+    if (teclaPressionada === 'e')
+        notaReSustenido.onclick()
+
+    if (teclaPressionada === 'd')
+        notaMi.onclick()
+
+    if (teclaPressionada === 'f')
+        notaFa.onclick()
+
+    if (teclaPressionada === 'y')
+        notaFaSustenido.onclick()
+
+    if (teclaPressionada === 'g')
+        notaSol.onclick()
+
+    if (teclaPressionada === 'u')
+        notaSolSustenido.onclick()
+
+    if (teclaPressionada === 'h')
+        notaLa.onclick()
+
+    if (teclaPressionada === 'i')
+        notaLaSustenido.onclick()
+
+    if (teclaPressionada === 'j')
+        notaSi.onclick()
+}
