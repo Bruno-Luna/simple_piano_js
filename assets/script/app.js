@@ -11,6 +11,10 @@ const notaFaSustenido = document.querySelector('.notaFaSustenido')
 const notaSolSustenido = document.querySelector('.notaSolSustenido')
 const notaLaSustenido = document.querySelector('.notaLaSustenido')
 
+const buttonOpenDialog = document.getElementById('moreInfo')
+const buttonCloseDialog = document.getElementById('close')
+const modal = document.querySelector('dialog')
+
 const nota = new Audio;
 
 notaDo.onclick = () => {
@@ -136,4 +140,12 @@ const verificarTeclaPressionada = (event) => {
 
     if (teclaPressionada === 'j')
         notaSi.onclick()
+}
+
+buttonOpenDialog.onclick = function(){
+    modal.showModal()
+}
+
+buttonCloseDialog.onclick = () => {
+    modal.close()
 }
