@@ -4,6 +4,15 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.teclas{
+    display: flex;
+}
+
 .notaDo, .notaRe,
 .notaMi, .notaFa, .notaSol,
 .notaLa, .notaSi {
