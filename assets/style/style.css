@@ -4,15 +4,9 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-main {
-    height: 40vw;
-    display: flex;
-    gap: .4rem;
-    justify-content: center;
-    align-items: center;
-}
-
-div {
+.notaDo, .notaRe,
+.notaMi, .notaFa, .notaSol,
+.notaLa, .notaSi {
     width: 3rem;
     height: 24vw;
     border: 2px solid rgba(0, 0, 0, 0.712);
@@ -20,9 +14,6 @@ div {
     text-align: center;
     cursor: pointer;
     font-size: .92rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .notaClicada {
@@ -44,4 +35,8 @@ div {
 .notaClicadaSustenido {
     background-color: #ffffffe0;
     color: rgba(0, 0, 0, 0.712);
+}
+
+dialog{
+    width: 40vw;
 }
