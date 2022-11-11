@@ -5,11 +5,6 @@ body {
     background-color: #efd9b4;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-}
-
 .teclas{
     display: flex;
     justify-content: center;
@@ -53,6 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .notaClicadaSustenido {
@@ -61,5 +57,27 @@ body {
 }
 
 dialog{
-    width: 40vw;
+    width: 30vw;
+    background-color: #d6a692;
+    border: none;
+    box-shadow: 2px 2px 6px #4d6160 ;
+    text-align: justify;
+}
+
+#moreInfo, #close{
+    border-radius: .3rem;
+    background-color: #4d6160;
+    padding: .4rem;
+    color: #fff;
+    letter-spacing: .08rem;
+    cursor: pointer;
+}
+
+#close{
+    float: right;
+    margin-top: .8rem;
+}
+
+#moreInfo{
+    float: right;
 }
