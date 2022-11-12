@@ -14,6 +14,7 @@ const buttonOpenDialog = document.getElementById('moreInfo')
 const buttonCloseDialog = document.getElementById('close')
 const modal = document.querySelector('dialog')
 const nomeUser = document.getElementById('nameUser')
+const alterarNomeUsuario = document.getElementById('changeName')
 
 const verificarNomeLocalStorage = () => {
     let getNomeUsuario = localStorage.getItem('nomeUsuario')
@@ -25,6 +26,12 @@ const verificarNomeLocalStorage = () => {
     }
 
     nomeUser.textContent = `Seja bem-vindo(a) ${getNomeUsuario}.`
+}
+
+alterarNomeUsuario.onclick = () => {
+    localStorage.setItem('nomeUsuario', null)
+    verificarNomeLocalStorage()
+    verificarNomeLocalStorage()
 }
 
 verificarNomeLocalStorage()
