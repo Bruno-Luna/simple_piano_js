@@ -10,10 +10,24 @@ const notaReSustenido = document.querySelector('.notaReSustenido')
 const notaFaSustenido = document.querySelector('.notaFaSustenido')
 const notaSolSustenido = document.querySelector('.notaSolSustenido')
 const notaLaSustenido = document.querySelector('.notaLaSustenido')
-
 const buttonOpenDialog = document.getElementById('moreInfo')
 const buttonCloseDialog = document.getElementById('close')
 const modal = document.querySelector('dialog')
+
+
+function myFunction() {
+
+    const retornarNome = localStorage.getItem('nomeUsuario')
+
+    if(retornarNome === null || retornarNome === ''){
+        const nomeUsuario = prompt('Escreva seu nome:')
+        localStorage.setItem('nomeUsuario', nomeUsuario)
+    }
+
+}
+
+myFunction()
+
 
 const nota = new Audio;
 
