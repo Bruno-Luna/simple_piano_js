@@ -16,11 +16,12 @@ const modal = document.querySelector('dialog')
 
 
 const verificarNomeLocalStorage = () => {
-    const retornarNome = localStorage.getItem('nomeUsuario')
-
-    if(retornarNome === null || retornarNome === ''){
-        const nomeUsuario = prompt('Escreva seu nome:')
-        localStorage.setItem('nomeUsuario', nomeUsuario)
+    let getNomeUsuario = localStorage.getItem('nomeUsuario')
+    const naoTemNomeSalvo = getNomeUsuario === 'null' || getNomeUsuario === null
+    
+    if(naoTemNomeSalvo){
+        const setNomeUsuario = prompt('Escreva seu nome:')
+        localStorage.setItem('nomeUsuario', setNomeUsuario)
     }
 }
 
