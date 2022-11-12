@@ -13,7 +13,7 @@ const notaLaSustenido = document.querySelector('.notaLaSustenido')
 const buttonOpenDialog = document.getElementById('moreInfo')
 const buttonCloseDialog = document.getElementById('close')
 const modal = document.querySelector('dialog')
-
+const nomeUser = document.getElementById('nameUser')
 
 const verificarNomeLocalStorage = () => {
     let getNomeUsuario = localStorage.getItem('nomeUsuario')
@@ -23,10 +23,11 @@ const verificarNomeLocalStorage = () => {
         const setNomeUsuario = prompt('Escreva seu nome:')
         localStorage.setItem('nomeUsuario', setNomeUsuario)
     }
+
+    nomeUser.textContent = `Seja bem-vindo(a) ${getNomeUsuario}.`
 }
 
 verificarNomeLocalStorage()
-
 
 const nota = new Audio;
 
