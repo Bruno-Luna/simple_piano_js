@@ -18,7 +18,7 @@ const changeNameUser = document.getElementById('changeName')
 
 const nota = new Audio;
 
-const verificarNomeLocalStorage = () => {
+const getNameUserLocalStorage = () => {
     let getNameUser = localStorage.getItem('nameUser')
     
     if(getNameUser === 'null' || getNameUser === null){
@@ -31,91 +31,91 @@ const verificarNomeLocalStorage = () => {
 
 const alterNameUser = () => {
     localStorage.setItem('nameUser', null)
-    verificarNomeLocalStorage()
-    verificarNomeLocalStorage()
+    getNameUserLocalStorage()
+    getNameUserLocalStorage()
 }
 
  const playNoteC = () => {
     nota.src = 'assets/notes/C.mp3'
     nota.play()
-    verificarNotaTocada(noteC)
+    checkNotePlay(noteC)
 }
 
 const playSharpNoteC = () => {
     nota.src = 'assets/notes/Csharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(sharpNoteC)
+    checkNoteSharpPlay(sharpNoteC)
 }
 
 const playNoteD = () => {
     nota.src = 'assets/notes/D.mp3'
     nota.play()
-    verificarNotaTocada(noteD)
+    checkNotePlay(noteD)
 }
 
 const playSharpNoteD = () => {
     nota.src = 'assets/notes/Dsharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(sharpNoteD)
+    checkNoteSharpPlay(sharpNoteD)
 }
 
 const playNoteE = () => {
     nota.src = 'assets/notes/E.mp3'
     nota.play()
-    verificarNotaTocada(noteE)
+    checkNotePlay(noteE)
 }
 
 const playNoteF = () => {
     nota.src = 'assets/notes/F.mp3'
     nota.play()
-    verificarNotaTocada(noteF)
+    checkNotePlay(noteF)
 }
 
 const playSharpNoteF = () => {
     nota.src = 'assets/notes/Fsharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(sharpNoteF)
+    checkNoteSharpPlay(sharpNoteF)
 }
 
 const playNoteG = () => {
     nota.src = 'assets/notes/G.mp3'
     nota.play()
-    verificarNotaTocada(noteG)
+    checkNotePlay(noteG)
 }
 
 const playSharpNoteG = () => {
     nota.src = 'assets/notes/Gsharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(sharpNoteG)
+    checkNoteSharpPlay(sharpNoteG)
 }
 
 const playNoteA = () => {
     nota.src = 'assets/notes/A.mp3'
     nota.play()
-    verificarNotaTocada(noteA)
+    checkNotePlay(noteA)
 }
 
 const playSharpNoteA = () => {
     nota.src = 'assets/notes/Asharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(sharpNoteA)
+    checkNoteSharpPlay(sharpNoteA)
 }
 
 const playNoteB = () => {
     nota.src = 'assets/notes/B.mp3'
     nota.play()
-    verificarNotaTocada(noteB)
+    checkNotePlay(noteB)
 }
 
-const verificarNotaTocada = (nota) => {
+const checkNotePlay = (nota) => {
     nota.classList.toggle('notaClicada')
 }
 
-const verificarNotaTocadaSustenido = (nota) => {
+const checkNoteSharpPlay = (nota) => {
     nota.classList.toggle('notaClicadaSustenido')
 }
 
-const verificarTeclaPressionada = (event) => {
+const checkKeyPress = (event) => {
 
     switch (event.key) {
         case 'a':
@@ -158,7 +158,7 @@ const verificarTeclaPressionada = (event) => {
     }
 }
 
-verificarNomeLocalStorage()
+getNameUserLocalStorage()
 
 noteC.addEventListener('keypress', playNoteC)
 noteD.addEventListener('keypress', playNoteD)
@@ -176,6 +176,4 @@ sharpNoteA.addEventListener('click', playSharpNoteA)
 
 changeNameUser.addEventListener('click', alterNameUser)
 
-document.addEventListener('keypress', (event) => {
-        verificarTeclaPressionada(event)
-});
+document.addEventListener('keypress', (event) => {checkKeyPress(event)});
