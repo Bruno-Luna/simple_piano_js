@@ -20,9 +20,8 @@ const nota = new Audio;
 
 const verificarNomeLocalStorage = () => {
     let getNameUser = localStorage.getItem('nameUser')
-    const naoTemNomeSalvo = getNameUser === 'null' || getNameUser === null
     
-    if(naoTemNomeSalvo){
+    if(getNameUser === 'null' || getNameUser === null){
         const setNameUser = prompt('Escreva seu nome:')
         localStorage.setItem('nameUser', setNameUser)
     }
@@ -30,81 +29,79 @@ const verificarNomeLocalStorage = () => {
     nomeUser.textContent = `Seja bem-vindo(a) ${getNameUser}.`
 }
 
-changeNameUser.onclick = () => {
+const alterNameUser = () => {
     localStorage.setItem('nameUser', null)
     verificarNomeLocalStorage()
     verificarNomeLocalStorage()
 }
 
-
-noteC.onclick = () => {
+ const playNoteC = () => {
     nota.src = 'assets/notes/C.mp3'
     nota.play()
     verificarNotaTocada(noteC)
 }
 
-sharpNoteC.onclick = () => {
+const playSharpNoteC = () => {
     nota.src = 'assets/notes/Csharp.mp3'
     nota.play()
     verificarNotaTocadaSustenido(sharpNoteC)
 }
 
-noteD.onclick = () => {
+const playNoteD = () => {
     nota.src = 'assets/notes/D.mp3'
     nota.play()
     verificarNotaTocada(noteD)
 }
 
-sharpNoteD.onclick = () => {
+const playSharpNoteD = () => {
     nota.src = 'assets/notes/Dsharp.mp3'
     nota.play()
     verificarNotaTocadaSustenido(sharpNoteD)
 }
 
-noteE.onclick = () => {
+const playNoteE = () => {
     nota.src = 'assets/notes/E.mp3'
     nota.play()
     verificarNotaTocada(noteE)
 }
 
-noteF.onclick = () => {
+const playNoteF = () => {
     nota.src = 'assets/notes/F.mp3'
     nota.play()
     verificarNotaTocada(noteF)
 }
 
-sharpNoteF.onclick = () => {
+const playSharpNoteF = () => {
     nota.src = 'assets/notes/Fsharp.mp3'
     nota.play()
     verificarNotaTocadaSustenido(sharpNoteF)
 }
 
-noteG.onclick = () => {
+const playNoteG = () => {
     nota.src = 'assets/notes/G.mp3'
     nota.play()
     verificarNotaTocada(noteG)
 }
 
-sharpNoteG.onclick = () => {
+const playSharpNoteG = () => {
     nota.src = 'assets/notes/Gsharp.mp3'
     nota.play()
     verificarNotaTocadaSustenido(sharpNoteG)
 }
 
-noteA.onclick = () => {
+const playNoteA = () => {
     nota.src = 'assets/notes/A.mp3'
     nota.play()
     verificarNotaTocada(noteA)
-
 }
 
-sharpNoteA.onclick = () => {
+const playSharpNoteA = () => {
     nota.src = 'assets/notes/Asharp.mp3'
     nota.play()
     verificarNotaTocadaSustenido(sharpNoteA)
 }
 
-noteB.onclick = () => {
+const playNoteB = () => {
     nota.src = 'assets/notes/B.mp3'
     nota.play()
     verificarNotaTocada(noteB)
@@ -118,56 +115,76 @@ const verificarNotaTocadaSustenido = (nota) => {
     nota.classList.toggle('notaClicadaSustenido')
 }
 
-document.addEventListener('keypress', (event) => {
-    verificarTeclaPressionada(event)
-});
-
 const verificarTeclaPressionada = (event) => {
     const teclaPressionada = event.key
 
-    if (teclaPressionada === 'a')
-        noteC.onclick()
+    if (teclaPressionada === 'a'){
+        playNoteC()
+    }
 
-    if (teclaPressionada === 'w')
-        sharpNoteC.onclick()
+    if (teclaPressionada === 'w'){
+        playSharpNoteC()
+    }
 
-    if (teclaPressionada === 's')
-        noteD.onclick()
+    if (teclaPressionada === 's'){
+        playNoteD()
+    }
 
-    if (teclaPressionada === 'e')
-        sharpNoteD.onclick()
+    if (teclaPressionada === 'e'){
+        playSharpNoteD()
+    }
 
-    if (teclaPressionada === 'd')
-        noteE.onclick()
+    if (teclaPressionada === 'd'){
+        playNoteE()
+    }
 
-    if (teclaPressionada === 'f')
-        noteF.onclick()
+    if (teclaPressionada === 'f'){
+        playNoteF()
+    }
 
-    if (teclaPressionada === 'y')
-        sharpNoteF.onclick()
+    if (teclaPressionada === 'y'){
+        playSharpNoteF()
+    }
 
-    if (teclaPressionada === 'g')
-        noteG.onclick()
+    if (teclaPressionada === 'g'){
+        playNoteG()        
+    }
 
-    if (teclaPressionada === 'u')
-        sharpNoteG.onclick()
+    if (teclaPressionada === 'u'){
+        playSharpNoteG()
+    }
 
-    if (teclaPressionada === 'h')
-        noteA.onclick()
+    if (teclaPressionada === 'h'){
+        playNoteA()
+    }
 
-    if (teclaPressionada === 'i')
-        sharpNoteA.onclick()
+    if (teclaPressionada === 'i'){
+        playSharpNoteA()
+    }
 
-    if (teclaPressionada === 'j')
-        noteB.onclick()
+    if (teclaPressionada === 'j'){
+        playNoteB()
+    }
 }
 
 verificarNomeLocalStorage()
 
-buttonOpenDialog.onclick = function(){
-    dialog.showModal()
-}
+noteC.addEventListener('keypress', playNoteC)
+noteD.addEventListener('keypress', playNoteD)
+noteE.addEventListener('keypress', playNoteE)
+noteF.addEventListener('keypress', playNoteF)
+noteG.addEventListener('keypress', playNoteG)
+noteA.addEventListener('keypress', playNoteA)
+noteB.addEventListener('keypress', playNoteB)
 
-buttonCloseDialog.onclick = () => {
-    dialog.close()
-}
+sharpNoteC.addEventListener('click', playSharpNoteC)
+sharpNoteD.addEventListener('click', playSharpNoteD)
+sharpNoteF.addEventListener('click', playSharpNoteF)
+sharpNoteG.addEventListener('click', playSharpNoteG)
+sharpNoteA.addEventListener('click', playSharpNoteA)
+
+changeNameUser.addEventListener('click', alterNameUser)
+
+document.addEventListener('keypress', (event) => {
+        verificarTeclaPressionada(event)
+});
