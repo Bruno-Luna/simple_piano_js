@@ -5,11 +5,11 @@ const noteF = document.querySelector('.notaFa')
 const noteG = document.querySelector('.notaSol')
 const noteA = document.querySelector('.notaLa')
 const noteB = document.querySelector('.notaSi')
-const notaDoSustenido = document.querySelector('.notaDoSustenido')
-const notaReSustenido = document.querySelector('.notaReSustenido')
-const notaFaSustenido = document.querySelector('.notaFaSustenido')
-const notaSolSustenido = document.querySelector('.notaSolSustenido')
-const notaLaSustenido = document.querySelector('.notaLaSustenido')
+const sharpNoteC = document.querySelector('.notaDoSustenido')
+const sharpNoteD = document.querySelector('.notaReSustenido')
+const sharpNoteF = document.querySelector('.notaFaSustenido')
+const sharpNoteG = document.querySelector('.notaSolSustenido')
+const sharpNoteA = document.querySelector('.notaLaSustenido')
 const buttonOpenDialog = document.getElementById('moreInfo')
 const buttonCloseDialog = document.getElementById('close')
 const modal = document.querySelector('dialog')
@@ -44,10 +44,10 @@ noteC.onclick = () => {
     verificarNotaTocada(noteC)
 }
 
-notaDoSustenido.onclick = () => {
+sharpNoteC.onclick = () => {
     nota.src = 'assets/notes/Csharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(notaDoSustenido)
+    verificarNotaTocadaSustenido(sharpNoteC)
 }
 
 noteD.onclick = () => {
@@ -56,10 +56,10 @@ noteD.onclick = () => {
     verificarNotaTocada(noteD)
 }
 
-notaReSustenido.onclick = () => {
+sharpNoteD.onclick = () => {
     nota.src = 'assets/notes/Dsharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(notaReSustenido)
+    verificarNotaTocadaSustenido(sharpNoteD)
 }
 
 noteE.onclick = () => {
@@ -74,10 +74,10 @@ noteF.onclick = () => {
     verificarNotaTocada(noteF)
 }
 
-notaFaSustenido.onclick = () => {
+sharpNoteF.onclick = () => {
     nota.src = 'assets/notes/Fsharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(notaFaSustenido)
+    verificarNotaTocadaSustenido(sharpNoteF)
 }
 
 noteG.onclick = () => {
@@ -86,10 +86,10 @@ noteG.onclick = () => {
     verificarNotaTocada(noteG)
 }
 
-notaSolSustenido.onclick = () => {
+sharpNoteG.onclick = () => {
     nota.src = 'assets/notes/Gsharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(notaSolSustenido)
+    verificarNotaTocadaSustenido(sharpNoteG)
 }
 
 noteA.onclick = () => {
@@ -99,10 +99,10 @@ noteA.onclick = () => {
 
 }
 
-notaLaSustenido.onclick = () => {
+sharpNoteA.onclick = () => {
     nota.src = 'assets/notes/Asharp.mp3'
     nota.play()
-    verificarNotaTocadaSustenido(notaLaSustenido)
+    verificarNotaTocadaSustenido(sharpNoteA)
 }
 
 noteB.onclick = () => {
@@ -130,13 +130,13 @@ const verificarTeclaPressionada = (event) => {
         noteC.onclick()
 
     if (teclaPressionada === 'w')
-        notaDoSustenido.onclick()
+        sharpNoteC.onclick()
 
     if (teclaPressionada === 's')
         noteD.onclick()
 
     if (teclaPressionada === 'e')
-        notaReSustenido.onclick()
+        sharpNoteD.onclick()
 
     if (teclaPressionada === 'd')
         noteE.onclick()
@@ -145,19 +145,19 @@ const verificarTeclaPressionada = (event) => {
         noteF.onclick()
 
     if (teclaPressionada === 'y')
-        notaFaSustenido.onclick()
+        sharpNoteF.onclick()
 
     if (teclaPressionada === 'g')
         noteG.onclick()
 
     if (teclaPressionada === 'u')
-        notaSolSustenido.onclick()
+        sharpNoteG.onclick()
 
     if (teclaPressionada === 'h')
         noteA.onclick()
 
     if (teclaPressionada === 'i')
-        notaLaSustenido.onclick()
+        sharpNoteA.onclick()
 
     if (teclaPressionada === 'j')
         noteB.onclick()
