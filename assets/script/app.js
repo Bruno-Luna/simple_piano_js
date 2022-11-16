@@ -12,9 +12,11 @@ const sharpNoteG = document.querySelector('.notaSolSustenido')
 const sharpNoteA = document.querySelector('.notaLaSustenido')
 const buttonOpenDialog = document.getElementById('moreInfo')
 const buttonCloseDialog = document.getElementById('close')
-const modal = document.querySelector('dialog')
+const dialog = document.querySelector('dialog')
 const nomeUser = document.getElementById('nameUser')
 const changeNameUser = document.getElementById('changeName')
+
+const nota = new Audio;
 
 const verificarNomeLocalStorage = () => {
     let getNomeUsuario = localStorage.getItem('nomeUsuario')
@@ -34,9 +36,6 @@ changeNameUser.onclick = () => {
     verificarNomeLocalStorage()
 }
 
-verificarNomeLocalStorage()
-
-const nota = new Audio;
 
 noteC.onclick = () => {
     nota.src = 'assets/notes/C.mp3'
@@ -163,10 +162,12 @@ const verificarTeclaPressionada = (event) => {
         noteB.onclick()
 }
 
+verificarNomeLocalStorage()
+
 buttonOpenDialog.onclick = function(){
-    modal.showModal()
+    dialog.showModal()
 }
 
 buttonCloseDialog.onclick = () => {
-    modal.close()
+    dialog.close()
 }
