@@ -19,19 +19,19 @@ const changeNameUser = document.getElementById('changeName')
 const nota = new Audio;
 
 const verificarNomeLocalStorage = () => {
-    let getNomeUsuario = localStorage.getItem('nomeUsuario')
-    const naoTemNomeSalvo = getNomeUsuario === 'null' || getNomeUsuario === null
+    let getNameUser = localStorage.getItem('nameUser')
+    const naoTemNomeSalvo = getNameUser === 'null' || getNameUser === null
     
     if(naoTemNomeSalvo){
-        const setNomeUsuario = prompt('Escreva seu nome:')
-        localStorage.setItem('nomeUsuario', setNomeUsuario)
+        const setNameUser = prompt('Escreva seu nome:')
+        localStorage.setItem('nameUser', setNameUser)
     }
 
-    nomeUser.textContent = `Seja bem-vindo(a) ${getNomeUsuario}.`
+    nomeUser.textContent = `Seja bem-vindo(a) ${getNameUser}.`
 }
 
 changeNameUser.onclick = () => {
-    localStorage.setItem('nomeUsuario', null)
+    localStorage.setItem('nameUser', null)
     verificarNomeLocalStorage()
     verificarNomeLocalStorage()
 }
