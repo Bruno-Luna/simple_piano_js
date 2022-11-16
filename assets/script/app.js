@@ -118,52 +118,44 @@ const verificarNotaTocadaSustenido = (nota) => {
 const verificarTeclaPressionada = (event) => {
     const teclaPressionada = event.key
 
-    if (teclaPressionada === 'a'){
-        playNoteC()
-    }
-
-    if (teclaPressionada === 'w'){
-        playSharpNoteC()
-    }
-
-    if (teclaPressionada === 's'){
-        playNoteD()
-    }
-
-    if (teclaPressionada === 'e'){
-        playSharpNoteD()
-    }
-
-    if (teclaPressionada === 'd'){
-        playNoteE()
-    }
-
-    if (teclaPressionada === 'f'){
-        playNoteF()
-    }
-
-    if (teclaPressionada === 'y'){
-        playSharpNoteF()
-    }
-
-    if (teclaPressionada === 'g'){
-        playNoteG()        
-    }
-
-    if (teclaPressionada === 'u'){
-        playSharpNoteG()
-    }
-
-    if (teclaPressionada === 'h'){
-        playNoteA()
-    }
-
-    if (teclaPressionada === 'i'){
-        playSharpNoteA()
-    }
-
-    if (teclaPressionada === 'j'){
-        playNoteB()
+    switch (teclaPressionada) {
+        case 'a':
+            playNoteC()
+            break;
+        case 'w':
+            playSharpNoteC()
+            break;
+        case 's':
+            playNoteD()
+            break;
+        case 'e':
+            playSharpNoteD()
+            break;
+        case 'd':
+            playNoteE()
+            break;
+        case 'f':
+            playNoteF()
+            break;
+        case 'y':
+            playSharpNoteF()
+            break;
+        case 'g':
+            playNoteG()
+            break;
+        case 'u':
+            playSharpNoteG()
+            break;
+        case 'h':
+            playNoteA()
+            break;
+        case 'i':
+            playSharpNoteA()
+            break;
+        case 'j':
+            playNoteB()
+            break;
+        default:
     }
 }
 
