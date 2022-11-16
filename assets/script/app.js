@@ -13,7 +13,7 @@ const sharpNoteA = document.querySelector('.notaLaSustenido')
 const buttonOpenDialog = document.getElementById('moreInfo')
 const buttonCloseDialog = document.getElementById('close')
 const dialog = document.querySelector('dialog')
-const nomeUser = document.getElementById('nameUser')
+const nameUser = document.getElementById('nameUser')
 const changeNameUser = document.getElementById('changeName')
 
 const nota = new Audio;
@@ -26,7 +26,7 @@ const verificarNomeLocalStorage = () => {
         localStorage.setItem('nameUser', setNameUser)
     }
 
-    nomeUser.textContent = `Seja bem-vindo(a) ${getNameUser}.`
+    nameUser.textContent = `Seja bem-vindo(a) ${getNameUser}.`
 }
 
 const alterNameUser = () => {
@@ -116,9 +116,8 @@ const verificarNotaTocadaSustenido = (nota) => {
 }
 
 const verificarTeclaPressionada = (event) => {
-    const teclaPressionada = event.key
 
-    switch (teclaPressionada) {
+    switch (event.key) {
         case 'a':
             playNoteC()
             break;
