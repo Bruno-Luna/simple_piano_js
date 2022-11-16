@@ -1,10 +1,10 @@
-const notaDo = document.querySelector('.notaDo')
-const notaRe = document.querySelector('.notaRe')
-const notaMi = document.querySelector('.notaMi')
-const notaFa = document.querySelector('.notaFa')
-const notaSol = document.querySelector('.notaSol')
-const notaLa = document.querySelector('.notaLa')
-const notaSi = document.querySelector('.notaSi')
+const noteC = document.querySelector('.notaDo')
+const noteD = document.querySelector('.notaRe')
+const noteE = document.querySelector('.notaMi')
+const noteF = document.querySelector('.notaFa')
+const noteG = document.querySelector('.notaSol')
+const noteA = document.querySelector('.notaLa')
+const noteB = document.querySelector('.notaSi')
 const notaDoSustenido = document.querySelector('.notaDoSustenido')
 const notaReSustenido = document.querySelector('.notaReSustenido')
 const notaFaSustenido = document.querySelector('.notaFaSustenido')
@@ -38,10 +38,10 @@ verificarNomeLocalStorage()
 
 const nota = new Audio;
 
-notaDo.onclick = () => {
+noteC.onclick = () => {
     nota.src = 'assets/notes/C.mp3'
     nota.play()
-    verificarNotaTocada(notaDo)
+    verificarNotaTocada(noteC)
 }
 
 notaDoSustenido.onclick = () => {
@@ -50,10 +50,10 @@ notaDoSustenido.onclick = () => {
     verificarNotaTocadaSustenido(notaDoSustenido)
 }
 
-notaRe.onclick = () => {
+noteD.onclick = () => {
     nota.src = 'assets/notes/D.mp3'
     nota.play()
-    verificarNotaTocada(notaRe)
+    verificarNotaTocada(noteD)
 }
 
 notaReSustenido.onclick = () => {
@@ -62,16 +62,16 @@ notaReSustenido.onclick = () => {
     verificarNotaTocadaSustenido(notaReSustenido)
 }
 
-notaMi.onclick = () => {
+noteE.onclick = () => {
     nota.src = 'assets/notes/E.mp3'
     nota.play()
-    verificarNotaTocada(notaMi)
+    verificarNotaTocada(noteE)
 }
 
-notaFa.onclick = () => {
+noteF.onclick = () => {
     nota.src = 'assets/notes/F.mp3'
     nota.play()
-    verificarNotaTocada(notaFa)
+    verificarNotaTocada(noteF)
 }
 
 notaFaSustenido.onclick = () => {
@@ -80,10 +80,10 @@ notaFaSustenido.onclick = () => {
     verificarNotaTocadaSustenido(notaFaSustenido)
 }
 
-notaSol.onclick = () => {
+noteG.onclick = () => {
     nota.src = 'assets/notes/G.mp3'
     nota.play()
-    verificarNotaTocada(notaSol)
+    verificarNotaTocada(noteG)
 }
 
 notaSolSustenido.onclick = () => {
@@ -92,10 +92,10 @@ notaSolSustenido.onclick = () => {
     verificarNotaTocadaSustenido(notaSolSustenido)
 }
 
-notaLa.onclick = () => {
+noteA.onclick = () => {
     nota.src = 'assets/notes/A.mp3'
     nota.play()
-    verificarNotaTocada(notaLa)
+    verificarNotaTocada(noteA)
 
 }
 
@@ -105,10 +105,10 @@ notaLaSustenido.onclick = () => {
     verificarNotaTocadaSustenido(notaLaSustenido)
 }
 
-notaSi.onclick = () => {
+noteB.onclick = () => {
     nota.src = 'assets/notes/B.mp3'
     nota.play()
-    verificarNotaTocada(notaSi)
+    verificarNotaTocada(noteB)
 }
 
 const verificarNotaTocada = (nota) => {
@@ -127,40 +127,40 @@ const verificarTeclaPressionada = (event) => {
     const teclaPressionada = event.key
 
     if (teclaPressionada === 'a')
-        notaDo.onclick()
+        noteC.onclick()
 
     if (teclaPressionada === 'w')
         notaDoSustenido.onclick()
 
     if (teclaPressionada === 's')
-        notaRe.onclick()
+        noteD.onclick()
 
     if (teclaPressionada === 'e')
         notaReSustenido.onclick()
 
     if (teclaPressionada === 'd')
-        notaMi.onclick()
+        noteE.onclick()
 
     if (teclaPressionada === 'f')
-        notaFa.onclick()
+        noteF.onclick()
 
     if (teclaPressionada === 'y')
         notaFaSustenido.onclick()
 
     if (teclaPressionada === 'g')
-        notaSol.onclick()
+        noteG.onclick()
 
     if (teclaPressionada === 'u')
         notaSolSustenido.onclick()
 
     if (teclaPressionada === 'h')
-        notaLa.onclick()
+        noteA.onclick()
 
     if (teclaPressionada === 'i')
         notaLaSustenido.onclick()
 
     if (teclaPressionada === 'j')
-        notaSi.onclick()
+        noteB.onclick()
 }
 
 buttonOpenDialog.onclick = function(){
