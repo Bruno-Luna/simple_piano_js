@@ -176,5 +176,10 @@ sharpNoteG.addEventListener('click', playSharpNoteG)
 sharpNoteA.addEventListener('click', playSharpNoteA)
 
 changeNameUser.addEventListener('click', alterNameUser)
-
+buttonOpenDialog.onclick = function(){
+    dialog.showModal()
+}
+buttonCloseDialog.onclick = () => {
+    dialog.close()
+}
 document.addEventListener('keypress', (event) => {checkKeyPress(event)});
