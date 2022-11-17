@@ -5,6 +5,12 @@ body {
     background-color: #efd9b4;
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .teclas{
     display: flex;
     justify-content: center;
