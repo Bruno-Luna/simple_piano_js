@@ -26,7 +26,7 @@ const getNameUserLocalStorage = () => {
         localStorage.setItem('nameUser', setNameUser)
     }
 
-    contentNameUser.textContent = `Seja bem-vindo(a) ${getNameUser}`
+    contentNameUser.textContent = `${getNameUser}`
 }
 
 const alterNameUser = () => {
