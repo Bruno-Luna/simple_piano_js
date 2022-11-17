@@ -13,7 +13,7 @@ const sharpNoteA = document.querySelector('.notaLaSustenido')
 const buttonOpenDialog = document.getElementById('moreInfo')
 const buttonCloseDialog = document.getElementById('close')
 const dialog = document.querySelector('dialog')
-const nameUser = document.getElementById('nameUser')
+const contentNameUser = document.getElementById('nameUser')
 const changeNameUser = document.getElementById('changeName')
 
 const nota = new Audio;
@@ -21,12 +21,12 @@ const nota = new Audio;
 const getNameUserLocalStorage = () => {
     let getNameUser = localStorage.getItem('nameUser')
     
-    if(getNameUser === 'null' || getNameUser === null){
+    if(getNameUser === 'null' || getNameUser === null || getNameUser === ''){
         const setNameUser = prompt('Escreva seu nome:')
         localStorage.setItem('nameUser', setNameUser)
     }
 
-    nameUser.textContent = `Seja bem-vindo(a) ${getNameUser}.`
+    contentNameUser.textContent = `Seja bem-vindo(a) ${getNameUser}`
 }
 
 const alterNameUser = () => {
