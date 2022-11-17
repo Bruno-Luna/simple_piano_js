@@ -24,10 +24,10 @@ const getNameUserLocalStorage = () => {
     if(getNameUser === 'null' || getNameUser === null || getNameUser === ''){
         const setNameUser = prompt('Escreva seu nome:')
         localStorage.setItem('nameUser', setNameUser)
+    }else{
+        contentNameUser.textContent = `${getNameUser}`
+        contentNameUser.style.fontWeight = 'bold'
     }
-
-    contentNameUser.textContent = `${getNameUser}`
-    contentNameUser.style.fontWeight = 'bold'
 }
 
 const alterNameUser = () => {
