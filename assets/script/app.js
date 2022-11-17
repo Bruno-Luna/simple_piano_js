@@ -163,13 +163,13 @@ const checkKeyPress = (event) => {
 
 getNameUserLocalStorage()
 
-noteC.addEventListener('keypress', playNoteC)
-noteD.addEventListener('keypress', playNoteD)
-noteE.addEventListener('keypress', playNoteE)
-noteF.addEventListener('keypress', playNoteF)
-noteG.addEventListener('keypress', playNoteG)
-noteA.addEventListener('keypress', playNoteA)
-noteB.addEventListener('keypress', playNoteB)
+noteC.addEventListener('click', playNoteC)
+noteD.addEventListener('click', playNoteD)
+noteE.addEventListener('click', playNoteE)
+noteF.addEventListener('click', playNoteF)
+noteG.addEventListener('click', playNoteG)
+noteA.addEventListener('click', playNoteA)
+noteB.addEventListener('click', playNoteB)
 
 sharpNoteC.addEventListener('click', playSharpNoteC)
 sharpNoteD.addEventListener('click', playSharpNoteD)
@@ -180,7 +180,7 @@ sharpNoteA.addEventListener('click', playSharpNoteA)
 changeNameUser.addEventListener('click', alterNameUser)
 buttonOpenDialog.onclick = function(){
     nameUserDialog.innerHTML = localStorage.getItem('nameUser')
-    nameUserDialog.style.fontWeight = 'bold'
+    nameUserDialog.style.fontWeight = 'bolda'
     dialog.showModal()
 }
 buttonCloseDialog.onclick = () => {
