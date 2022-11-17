@@ -27,6 +27,7 @@ const getNameUserLocalStorage = () => {
     }
 
     contentNameUser.textContent = `${getNameUser}`
+    contentNameUser.style.fontWeight = 'bold'
 }
 
 const alterNameUser = () => {
