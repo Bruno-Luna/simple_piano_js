@@ -15,6 +15,8 @@ const buttonCloseDialog = document.getElementById('close')
 const dialog = document.querySelector('dialog')
 const contentNameUser = document.getElementById('nameUser')
 const changeNameUser = document.getElementById('changeName')
+const nameUserDialog = document.querySelector('.nameUserDialog')
+
 
 const nota = new Audio;
 
@@ -177,6 +179,8 @@ sharpNoteA.addEventListener('click', playSharpNoteA)
 
 changeNameUser.addEventListener('click', alterNameUser)
 buttonOpenDialog.onclick = function(){
+    nameUserDialog.innerHTML = localStorage.getItem('nameUser')
+    nameUserDialog.style.fontWeight = 'bold'
     dialog.showModal()
 }
 buttonCloseDialog.onclick = () => {
