@@ -13,9 +13,8 @@ const sharpNoteA = document.querySelector('.notaLaSustenido')
 const buttonOpenDialog = document.getElementById('moreInfo')
 const buttonCloseDialog = document.getElementById('close')
 const dialog = document.querySelector('dialog')
-const contentNameUser = document.getElementById('nameUser')
+const nameUser = document.querySelectorAll('.nameUser')
 const changeNameUser = document.getElementById('changeName')
-const nameUserDialog = document.querySelector('.nameUserDialog')
 
 const nota = new Audio;
 
@@ -31,10 +30,9 @@ const alterNameUser = () => {
     localStorage.setItem('nameUser', null)
     const setNameUser = prompt('Escreva seu nome:')
     localStorage.setItem('nameUser', setNameUser)
-    let getNameUser =  localStorage.getItem('nameUser')
-    contentNameUser.textContent = `${getNameUser}`
-    contentNameUser.style.fontWeight = 'bold'
-
+    let getNameUser = localStorage.getItem('nameUser')
+    nameUser[0].textContent = `${getNameUser}`
+    nameUser[0].style.fontWeight = 'bold'
 }
 
  const playNoteC = () => {
@@ -118,8 +116,8 @@ const checkNoteSharpPlay = (nota) => {
 }
 
 const openDialog = () => {
-    nameUserDialog.innerHTML = localStorage.getItem('nameUser')
-    nameUserDialog.style.fontWeight = 'bolda'
+    nameUser[1].textContent = localStorage.getItem('nameUser')
+    nameUser[1].style.fontWeight = 'bold'
     dialog.showModal()
 }
 
