@@ -123,6 +123,8 @@ const openDialog = () => {
     dialog.showModal()
 }
 
+const closeDialog = () => { dialog.close() }
+
 const checkKeyPress = (event) => {
 
     switch (event.key) {
@@ -183,9 +185,8 @@ sharpNoteG.addEventListener('click', playSharpNoteG)
 sharpNoteA.addEventListener('click', playSharpNoteA)
 
 changeNameUser.addEventListener('click', alterNameUser)
-buttonOpenDialog.addEventListener('click', openDialog)
 
-buttonCloseDialog.onclick = () => {
-    dialog.close()
-}
+buttonOpenDialog.addEventListener('click', openDialog)
+buttonCloseDialog.addEventListener('click', closeDialog)
+
 document.addEventListener('keypress', (event) => {checkKeyPress(event)});
