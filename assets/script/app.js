@@ -17,25 +17,24 @@ const contentNameUser = document.getElementById('nameUser')
 const changeNameUser = document.getElementById('changeName')
 const nameUserDialog = document.querySelector('.nameUserDialog')
 
-
 const nota = new Audio;
 
 const getNameUserLocalStorage = () => {
     let getNameUser = localStorage.getItem('nameUser')
     
-    if(getNameUser === 'null' || getNameUser === null || getNameUser === ''){
-        const setNameUser = prompt('Escreva seu nome:')
-        localStorage.setItem('nameUser', setNameUser)
-    }else{
-        contentNameUser.textContent = `${getNameUser}`
-        contentNameUser.style.fontWeight = 'bold'
+    if(getNameUser === 'null' || getNameUser === null || getNameUser.includes('')){
+        alterNameUser()
     }
 }
 
 const alterNameUser = () => {
     localStorage.setItem('nameUser', null)
-    getNameUserLocalStorage()
-    getNameUserLocalStorage()
+    const setNameUser = prompt('Escreva seu nome:')
+    localStorage.setItem('nameUser', setNameUser)
+    let getNameUser =  localStorage.getItem('nameUser')
+    contentNameUser.textContent = `${getNameUser}`
+    contentNameUser.style.fontWeight = 'bold'
+
 }
 
  const playNoteC = () => {
