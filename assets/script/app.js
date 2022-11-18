@@ -24,6 +24,10 @@ const getNameUserLocalStorage = () => {
     if(getNameUser === 'null' || getNameUser === null){
         alterNameUser()
     }
+    
+    getNameUser = localStorage.getItem('nameUser')
+    nameUser[0].textContent = `${getNameUser}`
+    nameUser[0].style.fontWeight = 'bold'
 }
 
 const alterNameUser = () => {
