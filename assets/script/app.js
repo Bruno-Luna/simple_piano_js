@@ -117,6 +117,12 @@ const checkNoteSharpPlay = (nota) => {
     nota.classList.toggle('notaClicadaSustenido')
 }
 
+const openDialog = () => {
+    nameUserDialog.innerHTML = localStorage.getItem('nameUser')
+    nameUserDialog.style.fontWeight = 'bolda'
+    dialog.showModal()
+}
+
 const checkKeyPress = (event) => {
 
     switch (event.key) {
@@ -177,11 +183,8 @@ sharpNoteG.addEventListener('click', playSharpNoteG)
 sharpNoteA.addEventListener('click', playSharpNoteA)
 
 changeNameUser.addEventListener('click', alterNameUser)
-buttonOpenDialog.onclick = function(){
-    nameUserDialog.innerHTML = localStorage.getItem('nameUser')
-    nameUserDialog.style.fontWeight = 'bolda'
-    dialog.showModal()
-}
+buttonOpenDialog.addEventListener('click', openDialog)
+
 buttonCloseDialog.onclick = () => {
     dialog.close()
 }
