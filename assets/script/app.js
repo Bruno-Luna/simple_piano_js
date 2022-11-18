@@ -21,7 +21,7 @@ const nota = new Audio;
 const getNameUserLocalStorage = () => {
     let getNameUser = localStorage.getItem('nameUser')
     
-    if(getNameUser === 'null' || getNameUser === null || getNameUser.includes('')){
+    if(getNameUser === 'null' || getNameUser === null){
         alterNameUser()
     }
 }
