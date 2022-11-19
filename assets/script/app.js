@@ -31,12 +31,16 @@ const getNameUserLocalStorage = () => {
 }
 
 const alterNameUser = () => {
-    localStorage.setItem('nameUser', null)
     const setNameUser = prompt('Escreva seu nome:')
     localStorage.setItem('nameUser', setNameUser)
     let getNameUser = localStorage.getItem('nameUser')
+
     nameUser[0].textContent = `${getNameUser}`
     nameUser[0].style.fontWeight = 'bold'
+    if(getNameUser === 'null' || getNameUser === null){
+        localStorage.setItem('nameUser', '')
+        nameUser[0].textContent = ``
+    }
 }
 
  const playNoteC = () => {
