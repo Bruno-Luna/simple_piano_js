@@ -91,6 +91,15 @@ dialog{
 
 @media (max-width: 568px){ 
     html, #moreInfo, #close, #changeName{
-        font-size: .64rem;
+        font-size: .7rem;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #moreInfo{
+        width: 90vw;
+        font-size: .8rem;
     }
 }
