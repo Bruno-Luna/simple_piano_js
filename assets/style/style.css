@@ -102,4 +102,7 @@ dialog{
         width: 90vw;
         font-size: .8rem;
     }
+    dialog{
+        width: 65vw;
+    }
 }
