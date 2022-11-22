@@ -24,23 +24,24 @@ const getNameUserLocalStorage = () => {
     if(getNameUser === 'null' || getNameUser === null){
         alterNameUser()
     }
-    
-    getNameUser = localStorage.getItem('nameUser')
-    nameUser[0].textContent = `${getNameUser}`
-    nameUser[0].style.fontWeight = 'bold'
+    styleNameUser(getNameUser)
 }
 
 const alterNameUser = () => {
     const setNameUser = prompt('Escreva seu nome:')
     localStorage.setItem('nameUser', setNameUser)
     let getNameUser = localStorage.getItem('nameUser')
-
-    nameUser[0].textContent = `${getNameUser}`
-    nameUser[0].style.fontWeight = 'bold'
+    
+    styleNameUser(getNameUser)
     if(getNameUser === 'null' || getNameUser === null){
         localStorage.setItem('nameUser', '')
         nameUser[0].textContent = ``
     }
+}
+
+const styleNameUser = (name) => {
+    nameUser[0].textContent = `${name}`
+    nameUser[0].style.fontWeight = 'bold'
 }
 
  const playNoteC = () => {
