@@ -17,9 +17,10 @@ const nameUser = document.querySelectorAll('.nameUser')
 const changeNameUser = document.getElementById('changeName')
 
 const nota = new Audio;
+let getNameUser
 
 const getNameUserLocalStorage = () => {
-    let getNameUser = localStorage.getItem('nameUser')
+    getNameUser = localStorage.getItem('nameUser')
     
     if(getNameUser === 'null' || getNameUser === null){
         alterNameUser()
@@ -30,7 +31,7 @@ const getNameUserLocalStorage = () => {
 const alterNameUser = () => {
     const setNameUser = prompt('Escreva seu nome:')
     localStorage.setItem('nameUser', setNameUser)
-    let getNameUser = localStorage.getItem('nameUser')
+    getNameUser = localStorage.getItem('nameUser')
     
     styleNameUser(getNameUser)
     if(getNameUser === 'null' || getNameUser === null){
