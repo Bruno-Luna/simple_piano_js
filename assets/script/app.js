@@ -154,19 +154,19 @@ const checkKeyPress = (event) => {
         case 'f':
             playNoteF()
             break;
-        case 'y':
+        case 't':
             playSharpNoteF()
             break;
         case 'g':
             playNoteG()
             break;
-        case 'u':
+        case 'y':
             playSharpNoteG()
             break;
         case 'h':
             playNoteA()
             break;
-        case 'i':
+        case 'u':
             playSharpNoteA()
             break;
         case 'j':
